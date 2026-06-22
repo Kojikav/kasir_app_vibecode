@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * { box-sizing: border-box; }
+  body {
+    @apply font-sans bg-slate-50 text-slate-900 m-0 p-0 antialiased;
+  }
+}
+
+@media print {
+  body * { visibility: hidden; }
+  #receipt-print-area, #receipt-print-area * { visibility: visible; }
+  #receipt-print-area { position: absolute; left: 0; top: 0; width: 80mm; }
+}
